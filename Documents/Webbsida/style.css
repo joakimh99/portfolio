@@ -1,0 +1,168 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
+
+body {
+   background-color: #24252a;
+}
+
+li, a, button {
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 35px;
+}
+
+.nav-links li a {
+  transition: all 0.3 ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #075fe4;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: #075fe4;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease 0;
+}
+
+button:hover {
+  background-color: #0848a9;
+}
+
+.intro-container {
+    display: flex;
+    padding: 30px 10%;
+    padding-bottom: 0px;
+}
+
+.intro-left {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  justify-content: center; /* horisontellt */
+  gap: 30px;
+  color: white;
+}
+
+.intro-left h1 {
+  font-size: 120px;
+  color: white;
+}
+
+.intro-left p {
+  font-size: 30px;
+  width: 1000px;
+}
+
+.intro-right {
+  flex: 1;
+  border-radius: 300px 300px 25px 25px;
+  background: linear-gradient(15deg, #0d47a1, #71b8ff); 
+  /* ändra färgerna till dina accentfärger */
+  box-shadow: 25px 20px 12px rgba(0,0,0,0.3);
+}
+
+.intro-right img {
+  display: block;
+  width: 600px;
+  height: auto; /* gör att proportionerna behålls */
+}
+
+.intro-left,
+.intro-right {
+  opacity: 0;                    /* börjar osynliga */
+  transform: translateY(-150px); /* börjar längre upp */
+  animation: fallDown 1s ease-out forwards; /* fallande animation */
+}
+
+.highlight {
+  color: #4ebbff;
+}
+
+.second-container {
+    display: flex;
+    align-content: space-between;
+    padding: 30px 10%;
+    padding-bottom: 0px;
+}
+
+.first {
+  background: white;
+  width: 200px;
+  height: 200px;
+}
+.second {
+  background: rgb(32, 188, 92);
+  width: 200px;
+  height: 200px;
+}
+.third {
+  background: rgb(75, 243, 255);
+  width: 200px;
+  height: 200px;
+}
+
+@keyframes fallDown {
+  0% {
+    opacity: 0;                   /* helt osynlig i början */
+    transform: translateY(-150px);
+  }
+  50% {
+    opacity: 0.3;                 /* snabbare fade-in */
+  }
+  100% {
+    opacity: 1;                   /* helt synlig i slutet */
+    transform: translateY(0);     /* hamnar på rätt plats */
+  }
+}
+
+
+
+.button-intro {
+  width: 200px;
+}
+
+@media (max-width: 1540px) {
+  .intro-left h1 {
+    font-size: 70px;
+  }
+    .intro-left p {
+    font-size: 18px;
+    width: 600px;
+  }
+.intro-right img {
+  display: block;
+  width: 400px;
+  height: auto; /* gör att proportionerna behålls */
+}
+
+}
